@@ -1,0 +1,1101 @@
+2026-04-15 12:46:28,820 p=2462 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 12:46:28,821 p=2462 u=root n=ansible | pay-web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.9"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-15 12:46:28,834 p=2462 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 12:46:28,835 p=2462 u=root n=ansible | pay-web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.9"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-15 12:46:28,836 p=2462 u=root n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 12:46:28,837 p=2462 u=root n=ansible | pay-db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.9"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-15 12:46:29,024 p=2462 u=root n=ansible | pay-web03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-04-15 12:50:34,481 p=2529 u=root n=ansible | PLAY [Configure pay-api web nodes] *********************************************
+2026-04-15 12:50:34,491 p=2529 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 12:50:35,941 p=2529 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 12:50:35,942 p=2529 u=root n=ansible | ok: [pay-web02]
+2026-04-15 12:50:35,951 p=2529 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 12:50:35,951 p=2529 u=root n=ansible | ok: [pay-web01]
+2026-04-15 12:50:36,052 p=2529 u=root n=ansible | ok: [pay-web03]
+2026-04-15 12:50:36,063 p=2529 u=root n=ansible | TASK [Install httpd on CentOS] *************************************************
+2026-04-15 12:50:36,189 p=2529 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 12:50:37,169 p=2529 u=root n=ansible | ok: [pay-web02]
+2026-04-15 12:50:37,190 p=2529 u=root n=ansible | ok: [pay-web01]
+2026-04-15 12:50:37,196 p=2529 u=root n=ansible | TASK [Install apache2 on Ubuntu] ***********************************************
+2026-04-15 12:50:37,246 p=2529 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 12:50:37,257 p=2529 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 12:50:44,888 p=2529 u=root n=ansible | ok: [pay-web03]
+2026-04-15 12:50:44,896 p=2529 u=root n=ansible | TASK [Start the web service on CentOS] *****************************************
+2026-04-15 12:50:44,992 p=2529 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 12:50:45,771 p=2529 u=root n=ansible | ok: [pay-web02]
+2026-04-15 12:50:45,779 p=2529 u=root n=ansible | ok: [pay-web01]
+2026-04-15 12:50:45,786 p=2529 u=root n=ansible | TASK [Start the web service on Ubuntu] *****************************************
+2026-04-15 12:50:45,836 p=2529 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 12:50:45,848 p=2529 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 12:50:46,355 p=2529 u=root n=ansible | ok: [pay-web03]
+2026-04-15 12:50:46,367 p=2529 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 12:50:46,367 p=2529 u=root n=ansible | pay-web01                  : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2026-04-15 12:50:46,367 p=2529 u=root n=ansible | pay-web02                  : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2026-04-15 12:50:46,367 p=2529 u=root n=ansible | pay-web03                  : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2026-04-15 13:00:26,959 p=2646 u=root n=ansible | PLAY [Configure pay-api web nodes] *********************************************
+2026-04-15 13:00:26,969 p=2646 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 13:00:28,415 p=2646 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:00:28,415 p=2646 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:00:28,456 p=2646 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:00:28,456 p=2646 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:00:28,774 p=2646 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:00:28,785 p=2646 u=root n=ansible | TASK [Install httpd on CentOS] *************************************************
+2026-04-15 13:00:28,875 p=2646 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:00:29,867 p=2646 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:00:29,887 p=2646 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:00:29,894 p=2646 u=root n=ansible | TASK [Install apache2 on Ubuntu] ***********************************************
+2026-04-15 13:00:29,943 p=2646 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:00:29,954 p=2646 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:00:32,589 p=2646 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:00:32,597 p=2646 u=root n=ansible | TASK [Start the web service on CentOS] *****************************************
+2026-04-15 13:00:32,691 p=2646 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:00:33,451 p=2646 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:00:33,479 p=2646 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:00:33,486 p=2646 u=root n=ansible | TASK [Start the web service on Ubuntu] *****************************************
+2026-04-15 13:00:33,536 p=2646 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:00:33,547 p=2646 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:00:33,977 p=2646 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:00:33,984 p=2646 u=root n=ansible | TASK [Install standard tools on CentOS] ****************************************
+2026-04-15 13:00:34,085 p=2646 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 13:00:34,090 p=2646 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 13:00:34,095 p=2646 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 13:00:34,098 p=2646 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 13:00:34,717 p=2646 u=root n=ansible | failed: [pay-web02] (item=git) => {"ansible_loop_var": "item", "changed": false, "item": "git", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:34,733 p=2646 u=root n=ansible | failed: [pay-web01] (item=git) => {"ansible_loop_var": "item", "changed": false, "item": "git", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:35,230 p=2646 u=root n=ansible | failed: [pay-web02] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:35,261 p=2646 u=root n=ansible | failed: [pay-web01] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:35,749 p=2646 u=root n=ansible | failed: [pay-web02] (item=zip) => {"ansible_loop_var": "item", "changed": false, "item": "zip", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:35,796 p=2646 u=root n=ansible | failed: [pay-web01] (item=zip) => {"ansible_loop_var": "item", "changed": false, "item": "zip", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:36,261 p=2646 u=root n=ansible | failed: [pay-web02] (item=unzip) => {"ansible_loop_var": "item", "changed": false, "item": "unzip", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:36,319 p=2646 u=root n=ansible | failed: [pay-web01] (item=unzip) => {"ansible_loop_var": "item", "changed": false, "item": "unzip", "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 13:00:36,327 p=2646 u=root n=ansible | TASK [Install standard tools on Ubuntu] ****************************************
+2026-04-15 13:00:38,760 p=2646 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 13:00:41,143 p=2646 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 13:00:48,008 p=2646 u=root n=ansible | changed: [pay-web03] => (item=zip)
+2026-04-15 13:00:50,432 p=2646 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 13:00:50,446 p=2646 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 13:00:50,446 p=2646 u=root n=ansible | pay-web01                  : ok=3    changed=0    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2026-04-15 13:00:50,447 p=2646 u=root n=ansible | pay-web02                  : ok=3    changed=0    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2026-04-15 13:00:50,447 p=2646 u=root n=ansible | pay-web03                  : ok=4    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2026-04-15 13:02:30,253 p=2853 u=root n=ansible | PLAY [Configure pay-api web nodes] *********************************************
+2026-04-15 13:02:30,263 p=2853 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 13:02:31,693 p=2853 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:02:31,694 p=2853 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:02:31,708 p=2853 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:02:31,708 p=2853 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:02:32,004 p=2853 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:02:32,015 p=2853 u=root n=ansible | TASK [Install httpd on CentOS] *************************************************
+2026-04-15 13:02:32,105 p=2853 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:02:33,088 p=2853 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:02:33,112 p=2853 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:02:33,119 p=2853 u=root n=ansible | TASK [Install apache2 on Ubuntu] ***********************************************
+2026-04-15 13:02:33,169 p=2853 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:02:33,179 p=2853 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:02:35,752 p=2853 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:02:35,759 p=2853 u=root n=ansible | TASK [Start the web service on CentOS] *****************************************
+2026-04-15 13:02:35,855 p=2853 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:02:36,620 p=2853 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:02:36,636 p=2853 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:02:36,642 p=2853 u=root n=ansible | TASK [Start the web service on Ubuntu] *****************************************
+2026-04-15 13:02:36,691 p=2853 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:02:36,703 p=2853 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:02:37,129 p=2853 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:02:37,136 p=2853 u=root n=ansible | TASK [Install standard tools on CentOS] ****************************************
+2026-04-15 13:02:37,234 p=2853 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 13:02:37,237 p=2853 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 13:02:37,243 p=2853 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 13:02:37,249 p=2853 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 13:02:43,507 p=2853 u=root n=ansible | changed: [pay-web02] => (item=git)
+2026-04-15 13:02:43,508 p=2853 u=root n=ansible | changed: [pay-web01] => (item=git)
+2026-04-15 13:02:45,209 p=2853 u=root n=ansible | changed: [pay-web02] => (item=wget)
+2026-04-15 13:02:45,300 p=2853 u=root n=ansible | changed: [pay-web01] => (item=wget)
+2026-04-15 13:02:46,633 p=2853 u=root n=ansible | changed: [pay-web02] => (item=zip)
+2026-04-15 13:02:46,789 p=2853 u=root n=ansible | changed: [pay-web01] => (item=zip)
+2026-04-15 13:02:47,549 p=2853 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 13:02:47,726 p=2853 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 13:02:47,733 p=2853 u=root n=ansible | TASK [Install standard tools on Ubuntu] ****************************************
+2026-04-15 13:02:47,794 p=2853 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 13:02:47,795 p=2853 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 13:02:47,796 p=2853 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 13:02:47,798 p=2853 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 13:02:47,815 p=2853 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 13:02:47,822 p=2853 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 13:02:47,830 p=2853 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 13:02:47,837 p=2853 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 13:02:50,235 p=2853 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 13:02:52,605 p=2853 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 13:02:54,979 p=2853 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 13:02:57,371 p=2853 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 13:02:57,383 p=2853 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 13:02:57,384 p=2853 u=root n=ansible | pay-web01                  : ok=4    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2026-04-15 13:02:57,384 p=2853 u=root n=ansible | pay-web02                  : ok=4    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2026-04-15 13:02:57,384 p=2853 u=root n=ansible | pay-web03                  : ok=4    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2026-04-15 13:15:47,082 p=3082 u=root n=ansible | PLAY [Configure pay-api web nodes] *********************************************
+2026-04-15 13:15:47,092 p=3082 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 13:15:48,532 p=3082 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:15:48,532 p=3082 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:15:48,537 p=3082 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:15:48,537 p=3082 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:15:48,640 p=3082 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:15:48,651 p=3082 u=root n=ansible | TASK [Install httpd on CentOS] *************************************************
+2026-04-15 13:15:48,778 p=3082 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:15:49,764 p=3082 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:15:49,789 p=3082 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:15:49,796 p=3082 u=root n=ansible | TASK [Install apache2 on Ubuntu] ***********************************************
+2026-04-15 13:15:49,846 p=3082 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:15:49,855 p=3082 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:15:52,415 p=3082 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:15:52,422 p=3082 u=root n=ansible | TASK [Start the web service on CentOS] *****************************************
+2026-04-15 13:15:52,516 p=3082 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:15:53,288 p=3082 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:15:53,352 p=3082 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:15:53,359 p=3082 u=root n=ansible | TASK [Start the web service on Ubuntu] *****************************************
+2026-04-15 13:15:53,407 p=3082 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:15:53,419 p=3082 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:15:53,839 p=3082 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:15:53,846 p=3082 u=root n=ansible | TASK [Install standard tools on CentOS] ****************************************
+2026-04-15 13:15:53,943 p=3082 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 13:15:53,946 p=3082 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 13:15:53,955 p=3082 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 13:15:53,959 p=3082 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 13:15:54,842 p=3082 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 13:15:54,850 p=3082 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 13:15:55,778 p=3082 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 13:15:55,794 p=3082 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 13:15:56,685 p=3082 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 13:15:56,727 p=3082 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 13:15:57,604 p=3082 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 13:15:57,675 p=3082 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 13:15:57,682 p=3082 u=root n=ansible | TASK [Install standard tools on Ubuntu] ****************************************
+2026-04-15 13:15:57,741 p=3082 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 13:15:57,742 p=3082 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 13:15:57,745 p=3082 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 13:15:57,745 p=3082 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 13:15:57,767 p=3082 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 13:15:57,772 p=3082 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 13:15:57,780 p=3082 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 13:15:57,787 p=3082 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 13:16:00,287 p=3082 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 13:16:02,818 p=3082 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 13:16:05,287 p=3082 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 13:16:07,702 p=3082 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 13:16:07,710 p=3082 u=root n=ansible | TASK [Deploy custom welcome page] **********************************************
+2026-04-15 13:16:07,799 p=3082 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:16:08,856 p=3082 u=root n=ansible | changed: [pay-web02]
+2026-04-15 13:16:08,860 p=3082 u=root n=ansible | changed: [pay-web01]
+2026-04-15 13:16:08,867 p=3082 u=root n=ansible | TASK [Deploy custom welcome page on Ubuntu] ************************************
+2026-04-15 13:16:08,916 p=3082 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:16:08,926 p=3082 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:16:09,511 p=3082 u=root n=ansible | changed: [pay-web03]
+2026-04-15 13:16:09,518 p=3082 u=root n=ansible | RUNNING HANDLER [Restart web service] ******************************************
+2026-04-15 13:16:11,173 p=3082 u=root n=ansible | changed: [pay-web02]
+2026-04-15 13:16:11,231 p=3082 u=root n=ansible | changed: [pay-web01]
+2026-04-15 13:16:11,231 p=3082 u=root n=ansible | RUNNING HANDLER [Restart web service on Ubuntu] ********************************
+2026-04-15 13:16:11,829 p=3082 u=root n=ansible | changed: [pay-web03]
+2026-04-15 13:16:11,836 p=3082 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 13:16:11,836 p=3082 u=root n=ansible | pay-web01                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:16:11,836 p=3082 u=root n=ansible | pay-web02                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:16:11,837 p=3082 u=root n=ansible | pay-web03                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:19:01,069 p=3378 u=root n=ansible | PLAY [Configure pay-api web nodes] *********************************************
+2026-04-15 13:19:01,079 p=3378 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 13:19:03,275 p=3378 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:19:03,528 p=3378 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:19:03,528 p=3378 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:19:04,157 p=3378 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:19:04,157 p=3378 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:19:04,168 p=3378 u=root n=ansible | TASK [Install httpd on CentOS] *************************************************
+2026-04-15 13:19:04,256 p=3378 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:19:05,299 p=3378 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:19:05,314 p=3378 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:19:05,321 p=3378 u=root n=ansible | TASK [Install apache2 on Ubuntu] ***********************************************
+2026-04-15 13:19:05,372 p=3378 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:19:05,382 p=3378 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:19:07,938 p=3378 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:19:07,945 p=3378 u=root n=ansible | TASK [Start the web service on CentOS] *****************************************
+2026-04-15 13:19:08,044 p=3378 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:19:08,808 p=3378 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:19:08,817 p=3378 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:19:08,824 p=3378 u=root n=ansible | TASK [Start the web service on Ubuntu] *****************************************
+2026-04-15 13:19:08,875 p=3378 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:19:08,885 p=3378 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:19:09,312 p=3378 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:19:09,319 p=3378 u=root n=ansible | TASK [Install standard tools on CentOS] ****************************************
+2026-04-15 13:19:09,416 p=3378 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 13:19:09,421 p=3378 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 13:19:09,425 p=3378 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 13:19:09,429 p=3378 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 13:19:10,311 p=3378 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 13:19:10,327 p=3378 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 13:19:11,245 p=3378 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 13:19:11,264 p=3378 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 13:19:12,162 p=3378 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 13:19:12,199 p=3378 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 13:19:13,094 p=3378 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 13:19:13,136 p=3378 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 13:19:13,144 p=3378 u=root n=ansible | TASK [Install standard tools on Ubuntu] ****************************************
+2026-04-15 13:19:13,205 p=3378 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 13:19:13,208 p=3378 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 13:19:13,211 p=3378 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 13:19:13,217 p=3378 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 13:19:13,230 p=3378 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 13:19:13,239 p=3378 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 13:19:13,250 p=3378 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 13:19:13,300 p=3378 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 13:19:15,657 p=3378 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 13:19:18,058 p=3378 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 13:19:20,470 p=3378 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 13:19:22,859 p=3378 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 13:19:22,866 p=3378 u=root n=ansible | TASK [Deploy custom welcome page] **********************************************
+2026-04-15 13:19:22,956 p=3378 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:19:23,881 p=3378 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:19:23,897 p=3378 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:19:23,904 p=3378 u=root n=ansible | TASK [Deploy custom welcome page on Ubuntu] ************************************
+2026-04-15 13:19:23,955 p=3378 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:19:23,964 p=3378 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:19:24,482 p=3378 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:19:24,494 p=3378 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 13:19:24,494 p=3378 u=root n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:19:24,494 p=3378 u=root n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:19:24,494 p=3378 u=root n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:21:29,134 p=3636 u=root n=ansible | PLAY [Configure pay-api web nodes] *********************************************
+2026-04-15 13:21:29,143 p=3636 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 13:21:30,592 p=3636 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:21:30,593 p=3636 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:21:30,615 p=3636 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 13:21:30,615 p=3636 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:21:30,704 p=3636 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:21:30,740 p=3636 u=root n=ansible | TASK [Install httpd on CentOS] *************************************************
+2026-04-15 13:21:30,828 p=3636 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:21:31,834 p=3636 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:21:31,840 p=3636 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:21:31,846 p=3636 u=root n=ansible | TASK [Install apache2 on Ubuntu] ***********************************************
+2026-04-15 13:21:31,897 p=3636 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:21:31,906 p=3636 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:21:34,500 p=3636 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:21:34,507 p=3636 u=root n=ansible | TASK [Start the web service on CentOS] *****************************************
+2026-04-15 13:21:34,601 p=3636 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:21:35,372 p=3636 u=root n=ansible | ok: [pay-web02]
+2026-04-15 13:21:35,423 p=3636 u=root n=ansible | ok: [pay-web01]
+2026-04-15 13:21:35,431 p=3636 u=root n=ansible | TASK [Start the web service on Ubuntu] *****************************************
+2026-04-15 13:21:35,481 p=3636 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:21:35,492 p=3636 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:21:35,918 p=3636 u=root n=ansible | ok: [pay-web03]
+2026-04-15 13:21:35,925 p=3636 u=root n=ansible | TASK [Install standard tools on CentOS] ****************************************
+2026-04-15 13:21:36,024 p=3636 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 13:21:36,029 p=3636 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 13:21:36,034 p=3636 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 13:21:36,045 p=3636 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 13:21:36,915 p=3636 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 13:21:36,938 p=3636 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 13:21:37,851 p=3636 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 13:21:37,855 p=3636 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 13:21:38,772 p=3636 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 13:21:38,792 p=3636 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 13:21:39,672 p=3636 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 13:21:39,717 p=3636 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 13:21:39,723 p=3636 u=root n=ansible | TASK [Install standard tools on Ubuntu] ****************************************
+2026-04-15 13:21:39,781 p=3636 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 13:21:39,782 p=3636 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 13:21:39,785 p=3636 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 13:21:39,788 p=3636 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 13:21:39,804 p=3636 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 13:21:39,812 p=3636 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 13:21:39,819 p=3636 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 13:21:39,826 p=3636 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 13:21:42,237 p=3636 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 13:21:44,644 p=3636 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 13:21:47,033 p=3636 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 13:21:49,430 p=3636 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 13:21:49,437 p=3636 u=root n=ansible | TASK [Deploy custom welcome page] **********************************************
+2026-04-15 13:21:49,526 p=3636 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 13:21:50,525 p=3636 u=root n=ansible | changed: [pay-web02]
+2026-04-15 13:21:50,537 p=3636 u=root n=ansible | changed: [pay-web01]
+2026-04-15 13:21:50,544 p=3636 u=root n=ansible | TASK [Deploy custom welcome page on Ubuntu] ************************************
+2026-04-15 13:21:50,594 p=3636 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 13:21:50,606 p=3636 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 13:21:51,162 p=3636 u=root n=ansible | changed: [pay-web03]
+2026-04-15 13:21:51,169 p=3636 u=root n=ansible | RUNNING HANDLER [Restart web service] ******************************************
+2026-04-15 13:21:52,854 p=3636 u=root n=ansible | changed: [pay-web01]
+2026-04-15 13:21:52,900 p=3636 u=root n=ansible | changed: [pay-web02]
+2026-04-15 13:21:52,900 p=3636 u=root n=ansible | RUNNING HANDLER [Restart web service on Ubuntu] ********************************
+2026-04-15 13:21:53,426 p=3636 u=root n=ansible | changed: [pay-web03]
+2026-04-15 13:21:53,433 p=3636 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 13:21:53,433 p=3636 u=root n=ansible | pay-web01                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:21:53,433 p=3636 u=root n=ansible | pay-web02                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 13:21:53,433 p=3636 u=root n=ansible | pay-web03                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 14:15:51,259 p=4128 u=root n=ansible | ERROR! The tasks/main.yml file for role 'pay-api' must contain a list of tasks
+
+The error appears to be in '/home/ubuntu/pay-api/roles/pay-api/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+# tasks file for pay-api
+  tasks:
+  ^ here
+
+2026-04-15 14:19:05,744 p=4136 u=root n=ansible | ERROR! The handlers/main.yml file for role 'pay-api' must contain a list of tasks
+
+The error appears to be in '/home/ubuntu/pay-api/roles/pay-api/handlers/main.yml': line 3, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+# handlers file for pay-api
+ handlers:
+ ^ here
+
+2026-04-15 14:19:55,870 p=4144 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 14:19:55,881 p=4144 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 14:19:57,304 p=4144 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 14:19:57,304 p=4144 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:19:57,317 p=4144 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 14:19:57,317 p=4144 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:19:57,418 p=4144 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:19:57,430 p=4144 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] ***************************************
+2026-04-15 14:19:57,556 p=4144 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 14:19:58,562 p=4144 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:19:58,563 p=4144 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:19:58,570 p=4144 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] *************************************
+2026-04-15 14:19:58,621 p=4144 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 14:19:58,630 p=4144 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 14:20:01,495 p=4144 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:20:01,579 p=4144 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] *******************************
+2026-04-15 14:20:02,429 p=4144 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 14:20:03,446 p=4144 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:20:03,514 p=4144 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:20:03,522 p=4144 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] *******************************
+2026-04-15 14:20:03,573 p=4144 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 14:20:03,585 p=4144 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 14:20:04,015 p=4144 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:20:04,022 p=4144 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] ******************************
+2026-04-15 14:20:04,119 p=4144 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 14:20:04,124 p=4144 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 14:20:04,129 p=4144 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 14:20:04,133 p=4144 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 14:20:05,057 p=4144 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 14:20:05,058 p=4144 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 14:20:05,992 p=4144 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 14:20:06,012 p=4144 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 14:20:06,913 p=4144 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 14:20:06,956 p=4144 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 14:20:07,848 p=4144 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 14:20:07,901 p=4144 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 14:20:07,908 p=4144 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] ******************************
+2026-04-15 14:20:07,970 p=4144 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 14:20:07,971 p=4144 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 14:20:07,973 p=4144 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 14:20:07,974 p=4144 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 14:20:07,995 p=4144 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 14:20:08,003 p=4144 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 14:20:08,012 p=4144 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 14:20:08,019 p=4144 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 14:20:10,469 p=4144 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 14:20:12,920 p=4144 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 14:20:15,354 p=4144 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 14:20:17,752 p=4144 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 14:20:17,760 p=4144 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ************************************
+2026-04-15 14:20:17,850 p=4144 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 14:20:18,843 p=4144 u=root n=ansible | changed: [pay-web02]
+2026-04-15 14:20:18,858 p=4144 u=root n=ansible | changed: [pay-web01]
+2026-04-15 14:20:18,865 p=4144 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] **************************
+2026-04-15 14:20:18,919 p=4144 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 14:20:18,928 p=4144 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 14:20:19,487 p=4144 u=root n=ansible | changed: [pay-web03]
+2026-04-15 14:20:19,494 p=4144 u=root n=ansible | RUNNING HANDLER [pay-api : Restart web service] ********************************
+2026-04-15 14:20:21,181 p=4144 u=root n=ansible | changed: [pay-web02]
+2026-04-15 14:20:21,190 p=4144 u=root n=ansible | changed: [pay-web01]
+2026-04-15 14:20:21,190 p=4144 u=root n=ansible | RUNNING HANDLER [pay-api : Restart web service on Ubuntu] **********************
+2026-04-15 14:20:21,715 p=4144 u=root n=ansible | changed: [pay-web03]
+2026-04-15 14:20:21,722 p=4144 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 14:20:21,722 p=4144 u=root n=ansible | pay-web01                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 14:20:21,723 p=4144 u=root n=ansible | pay-web02                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 14:20:21,723 p=4144 u=root n=ansible | pay-web03                  : ok=6    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 14:26:36,807 p=4471 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 14:26:36,818 p=4471 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 14:26:38,255 p=4471 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 14:26:38,255 p=4471 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:26:38,275 p=4471 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 14:26:38,275 p=4471 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:26:38,382 p=4471 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:26:38,416 p=4471 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] ***************************************
+2026-04-15 14:26:38,506 p=4471 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 14:26:39,493 p=4471 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:26:39,517 p=4471 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:26:39,524 p=4471 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] *************************************
+2026-04-15 14:26:39,573 p=4471 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 14:26:39,584 p=4471 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 14:26:42,159 p=4471 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:26:42,166 p=4471 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] *******************************
+2026-04-15 14:26:42,261 p=4471 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 14:26:43,016 p=4471 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:26:43,032 p=4471 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:26:43,039 p=4471 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] *******************************
+2026-04-15 14:26:43,091 p=4471 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 14:26:43,101 p=4471 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 14:26:43,524 p=4471 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:26:43,531 p=4471 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] ******************************
+2026-04-15 14:26:43,630 p=4471 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 14:26:43,644 p=4471 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 14:26:43,645 p=4471 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 14:26:43,653 p=4471 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 14:26:44,516 p=4471 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 14:26:44,523 p=4471 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 14:26:45,456 p=4471 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 14:26:45,459 p=4471 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 14:26:46,383 p=4471 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 14:26:46,397 p=4471 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 14:26:47,309 p=4471 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 14:26:47,316 p=4471 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 14:26:47,323 p=4471 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] ******************************
+2026-04-15 14:26:47,383 p=4471 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 14:26:47,385 p=4471 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 14:26:47,392 p=4471 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 14:26:47,393 p=4471 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 14:26:47,408 p=4471 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 14:26:47,415 p=4471 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 14:26:47,423 p=4471 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 14:26:47,431 p=4471 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 14:26:49,851 p=4471 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 14:26:52,240 p=4471 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 14:26:54,636 p=4471 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 14:26:57,033 p=4471 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 14:26:57,040 p=4471 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ************************************
+2026-04-15 14:26:57,136 p=4471 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 14:26:58,054 p=4471 u=root n=ansible | ok: [pay-web02]
+2026-04-15 14:26:58,061 p=4471 u=root n=ansible | ok: [pay-web01]
+2026-04-15 14:26:58,068 p=4471 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] **************************
+2026-04-15 14:26:58,120 p=4471 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 14:26:58,129 p=4471 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 14:26:58,642 p=4471 u=root n=ansible | ok: [pay-web03]
+2026-04-15 14:26:58,655 p=4471 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 14:26:58,655 p=4471 u=root n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 14:26:58,655 p=4471 u=root n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 14:26:58,655 p=4471 u=root n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 15:47:48,460 p=4917 u=root n=ansible | [WARNING]: Unable to parse /home/ubuntu/pay-api/inventory as an inventory
+source
+
+2026-04-15 15:47:48,460 p=4917 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2026-04-15 15:47:48,463 p=4917 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2026-04-15 15:47:48,612 p=4917 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: webservers
+
+2026-04-15 15:47:48,612 p=4917 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 15:47:48,612 p=4917 u=root n=ansible | skipping: no hosts matched
+2026-04-15 15:47:48,613 p=4917 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 15:49:26,082 p=4921 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 15:49:26,095 p=4921 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 15:49:27,550 p=4921 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 15:49:27,551 p=4921 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:49:27,572 p=4921 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 15:49:27,572 p=4921 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:49:27,679 p=4921 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:49:27,690 p=4921 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] ***************************************
+2026-04-15 15:49:27,780 p=4921 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:49:28,770 p=4921 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:49:28,784 p=4921 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:49:28,791 p=4921 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] *************************************
+2026-04-15 15:49:28,841 p=4921 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:49:28,854 p=4921 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:49:36,119 p=4921 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:49:36,128 p=4921 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] *******************************
+2026-04-15 15:49:36,222 p=4921 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:49:36,991 p=4921 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:49:36,992 p=4921 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:49:36,999 p=4921 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] *******************************
+2026-04-15 15:49:37,050 p=4921 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:49:37,060 p=4921 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:49:37,563 p=4921 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:49:37,570 p=4921 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] ******************************
+2026-04-15 15:49:37,667 p=4921 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 15:49:37,674 p=4921 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 15:49:37,677 p=4921 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 15:49:37,682 p=4921 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 15:49:38,559 p=4921 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 15:49:38,572 p=4921 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 15:49:39,482 p=4921 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 15:49:39,493 p=4921 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 15:49:40,395 p=4921 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 15:49:40,432 p=4921 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 15:49:41,308 p=4921 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 15:49:41,367 p=4921 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 15:49:41,375 p=4921 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] ******************************
+2026-04-15 15:49:41,434 p=4921 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 15:49:41,435 p=4921 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 15:49:41,437 p=4921 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 15:49:41,444 p=4921 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 15:49:41,459 p=4921 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 15:49:41,463 p=4921 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 15:49:41,470 p=4921 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 15:49:41,475 p=4921 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 15:49:43,895 p=4921 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 15:49:46,330 p=4921 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 15:49:48,737 p=4921 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 15:49:51,155 p=4921 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 15:49:51,163 p=4921 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ************************************
+2026-04-15 15:49:51,253 p=4921 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:49:52,232 p=4921 u=root n=ansible | changed: [pay-web02]
+2026-04-15 15:49:52,246 p=4921 u=root n=ansible | changed: [pay-web01]
+2026-04-15 15:49:52,253 p=4921 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] **************************
+2026-04-15 15:49:52,306 p=4921 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:49:52,314 p=4921 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:49:52,884 p=4921 u=root n=ansible | changed: [pay-web03]
+2026-04-15 15:49:52,890 p=4921 u=root n=ansible | TASK [pay-api : Install MariaDB] ***********************************************
+2026-04-15 15:49:52,942 p=4921 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:49:52,952 p=4921 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:49:52,970 p=4921 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:49:52,976 p=4921 u=root n=ansible | TASK [pay-api : Start MariaDB] *************************************************
+2026-04-15 15:49:53,027 p=4921 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:49:53,036 p=4921 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:49:53,054 p=4921 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:49:53,061 p=4921 u=root n=ansible | RUNNING HANDLER [pay-api : Restart web service] ********************************
+2026-04-15 15:49:54,728 p=4921 u=root n=ansible | changed: [pay-web02]
+2026-04-15 15:49:54,750 p=4921 u=root n=ansible | changed: [pay-web01]
+2026-04-15 15:49:54,751 p=4921 u=root n=ansible | RUNNING HANDLER [pay-api : Restart web service on Ubuntu] **********************
+2026-04-15 15:49:55,301 p=4921 u=root n=ansible | changed: [pay-web03]
+2026-04-15 15:49:55,308 p=4921 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 15:49:55,308 p=4921 u=root n=ansible | pay-web01                  : ok=6    changed=2    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 15:49:55,308 p=4921 u=root n=ansible | pay-web02                  : ok=6    changed=2    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 15:49:55,309 p=4921 u=root n=ansible | pay-web03                  : ok=6    changed=2    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 15:52:48,861 p=5235 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 15:52:48,873 p=5235 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 15:52:50,355 p=5235 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 15:52:50,355 p=5235 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:52:50,396 p=5235 u=root n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 15:52:50,397 p=5235 u=root n=ansible | ok: [pay-db01]
+2026-04-15 15:52:50,399 p=5235 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 15:52:50,399 p=5235 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:52:50,599 p=5235 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:52:50,610 p=5235 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] ***************************************
+2026-04-15 15:52:50,725 p=5235 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:52:51,741 p=5235 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:52:51,741 p=5235 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:52:53,708 p=5235 u=root n=ansible | changed: [pay-db01]
+2026-04-15 15:52:53,715 p=5235 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] *************************************
+2026-04-15 15:52:53,766 p=5235 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:52:53,790 p=5235 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:52:53,824 p=5235 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 15:52:56,358 p=5235 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:52:56,365 p=5235 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] *******************************
+2026-04-15 15:52:56,475 p=5235 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:52:57,253 p=5235 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:52:57,258 p=5235 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:52:57,635 p=5235 u=root n=ansible | changed: [pay-db01]
+2026-04-15 15:52:57,642 p=5235 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] *******************************
+2026-04-15 15:52:57,694 p=5235 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:52:57,721 p=5235 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:52:57,753 p=5235 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 15:52:58,143 p=5235 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:52:58,150 p=5235 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] ******************************
+2026-04-15 15:52:58,282 p=5235 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 15:52:58,289 p=5235 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 15:52:58,303 p=5235 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 15:52:58,308 p=5235 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 15:52:59,167 p=5235 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 15:52:59,247 p=5235 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 15:53:00,154 p=5235 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 15:53:00,198 p=5235 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 15:53:01,110 p=5235 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 15:53:01,125 p=5235 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 15:53:01,791 p=5235 u=root n=ansible | changed: [pay-db01] => (item=git)
+2026-04-15 15:53:02,165 p=5235 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 15:53:02,620 p=5235 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 15:53:03,646 p=5235 u=root n=ansible | changed: [pay-db01] => (item=wget)
+2026-04-15 15:53:05,088 p=5235 u=root n=ansible | changed: [pay-db01] => (item=zip)
+2026-04-15 15:53:06,020 p=5235 u=root n=ansible | ok: [pay-db01] => (item=unzip)
+2026-04-15 15:53:06,027 p=5235 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] ******************************
+2026-04-15 15:53:06,088 p=5235 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 15:53:06,090 p=5235 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 15:53:06,093 p=5235 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 15:53:06,094 p=5235 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 15:53:06,130 p=5235 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 15:53:06,145 p=5235 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 15:53:06,160 p=5235 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 15:53:06,161 p=5235 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 15:53:06,172 p=5235 u=root n=ansible | skipping: [pay-db01] => (item=git) 
+2026-04-15 15:53:06,177 p=5235 u=root n=ansible | skipping: [pay-db01] => (item=wget) 
+2026-04-15 15:53:06,182 p=5235 u=root n=ansible | skipping: [pay-db01] => (item=zip) 
+2026-04-15 15:53:06,187 p=5235 u=root n=ansible | skipping: [pay-db01] => (item=unzip) 
+2026-04-15 15:53:08,533 p=5235 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 15:53:10,920 p=5235 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 15:53:13,317 p=5235 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 15:53:15,696 p=5235 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 15:53:15,703 p=5235 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ************************************
+2026-04-15 15:53:15,816 p=5235 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:53:16,804 p=5235 u=root n=ansible | ok: [pay-web02]
+2026-04-15 15:53:16,810 p=5235 u=root n=ansible | ok: [pay-web01]
+2026-04-15 15:53:16,934 p=5235 u=root n=ansible | changed: [pay-db01]
+2026-04-15 15:53:16,941 p=5235 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] **************************
+2026-04-15 15:53:16,994 p=5235 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:53:17,022 p=5235 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:53:17,055 p=5235 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 15:53:17,537 p=5235 u=root n=ansible | ok: [pay-web03]
+2026-04-15 15:53:17,545 p=5235 u=root n=ansible | TASK [pay-api : Install MariaDB] ***********************************************
+2026-04-15 15:53:17,598 p=5235 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:53:17,624 p=5235 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:53:17,638 p=5235 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:53:18,720 p=5235 u=root n=ansible | fatal: [pay-db01]: FAILED! => {"changed": false, "failures": ["No package mariadb-server available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2026-04-15 15:53:18,726 p=5235 u=root n=ansible | TASK [pay-api : Start MariaDB] *************************************************
+2026-04-15 15:53:18,779 p=5235 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 15:53:18,788 p=5235 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 15:53:18,807 p=5235 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 15:53:18,813 p=5235 u=root n=ansible | RUNNING HANDLER [pay-api : Restart web service] ********************************
+2026-04-15 15:53:18,819 p=5235 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 15:53:18,819 p=5235 u=root n=ansible | pay-db01                   : ok=5    changed=4    unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+2026-04-15 15:53:18,820 p=5235 u=root n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 15:53:18,820 p=5235 u=root n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 15:53:18,820 p=5235 u=root n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:04:01,838 p=5624 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 16:04:01,871 p=5624 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 16:04:03,445 p=5624 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 16:04:03,446 p=5624 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:04:03,458 p=5624 u=root n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 16:04:03,458 p=5624 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:04:03,589 p=5624 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:04:03,660 p=5624 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 16:04:03,660 p=5624 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:04:03,671 p=5624 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] ***************************************
+2026-04-15 16:04:03,778 p=5624 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:04:04,804 p=5624 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:04:04,818 p=5624 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:04:04,819 p=5624 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:04:04,827 p=5624 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] *************************************
+2026-04-15 16:04:04,880 p=5624 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:04:04,905 p=5624 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:04:04,938 p=5624 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:04:07,471 p=5624 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:04:07,479 p=5624 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] *******************************
+2026-04-15 16:04:07,600 p=5624 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:04:08,394 p=5624 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:04:08,400 p=5624 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:04:08,404 p=5624 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:04:08,411 p=5624 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] *******************************
+2026-04-15 16:04:08,464 p=5624 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:04:08,491 p=5624 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:04:08,523 p=5624 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:04:08,920 p=5624 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:04:08,927 p=5624 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] ******************************
+2026-04-15 16:04:09,055 p=5624 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 16:04:09,062 p=5624 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 16:04:09,074 p=5624 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 16:04:09,081 p=5624 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 16:04:09,955 p=5624 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 16:04:09,972 p=5624 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 16:04:10,003 p=5624 u=root n=ansible | ok: [pay-db01] => (item=git)
+2026-04-15 16:04:10,894 p=5624 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 16:04:10,894 p=5624 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 16:04:10,977 p=5624 u=root n=ansible | ok: [pay-db01] => (item=wget)
+2026-04-15 16:04:11,810 p=5624 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 16:04:11,854 p=5624 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 16:04:11,923 p=5624 u=root n=ansible | ok: [pay-db01] => (item=zip)
+2026-04-15 16:04:12,715 p=5624 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 16:04:12,804 p=5624 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 16:04:12,859 p=5624 u=root n=ansible | ok: [pay-db01] => (item=unzip)
+2026-04-15 16:04:12,866 p=5624 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] ******************************
+2026-04-15 16:04:12,926 p=5624 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 16:04:12,927 p=5624 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 16:04:12,931 p=5624 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 16:04:12,963 p=5624 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 16:04:12,972 p=5624 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 16:04:12,984 p=5624 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 16:04:12,995 p=5624 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 16:04:13,002 p=5624 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 16:04:13,016 p=5624 u=root n=ansible | skipping: [pay-db01] => (item=git) 
+2026-04-15 16:04:13,021 p=5624 u=root n=ansible | skipping: [pay-db01] => (item=wget) 
+2026-04-15 16:04:13,028 p=5624 u=root n=ansible | skipping: [pay-db01] => (item=zip) 
+2026-04-15 16:04:13,034 p=5624 u=root n=ansible | skipping: [pay-db01] => (item=unzip) 
+2026-04-15 16:04:15,436 p=5624 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 16:04:17,863 p=5624 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 16:04:20,275 p=5624 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 16:04:22,699 p=5624 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 16:04:22,707 p=5624 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ************************************
+2026-04-15 16:04:22,824 p=5624 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:04:23,798 p=5624 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:04:23,809 p=5624 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:04:23,822 p=5624 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:04:23,828 p=5624 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] **************************
+2026-04-15 16:04:23,879 p=5624 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:04:23,907 p=5624 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:04:23,939 p=5624 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:04:24,423 p=5624 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:04:24,430 p=5624 u=root n=ansible | TASK [pay-api : Install MariaDB] ***********************************************
+2026-04-15 16:04:24,481 p=5624 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:04:24,507 p=5624 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:04:24,516 p=5624 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:04:25,209 p=5624 u=root n=ansible | fatal: [pay-db01]: FAILED! => {"changed": false, "msg": "The Python 2 yum module is needed for this module. If you require Python 3 support use the `dnf` Ansible module instead."}
+2026-04-15 16:04:25,216 p=5624 u=root n=ansible | TASK [pay-api : Start MariaDB] *************************************************
+2026-04-15 16:04:25,268 p=5624 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:04:25,281 p=5624 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:04:25,296 p=5624 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:04:25,308 p=5624 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 16:04:25,308 p=5624 u=root n=ansible | pay-db01                   : ok=5    changed=0    unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+2026-04-15 16:04:25,309 p=5624 u=root n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:04:25,309 p=5624 u=root n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:04:25,309 p=5624 u=root n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:07:12,802 p=5984 u=root n=ansible | PLAY [Set up the pay-api environment] ******************************************
+2026-04-15 16:07:12,814 p=5984 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2026-04-15 16:07:14,295 p=5984 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 16:07:14,295 p=5984 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:07:14,317 p=5984 u=root n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 16:07:14,317 p=5984 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:07:14,327 p=5984 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python
+interpreter at /usr/bin/python3.9, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com
+/ansible/2.10/reference_appendices/interpreter_discovery.html for more
+information.
+
+2026-04-15 16:07:14,328 p=5984 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:07:14,411 p=5984 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:07:14,421 p=5984 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] ***************************************
+2026-04-15 16:07:14,529 p=5984 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:07:15,549 p=5984 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:07:15,556 p=5984 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:07:15,566 p=5984 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:07:15,573 p=5984 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] *************************************
+2026-04-15 16:07:15,627 p=5984 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:07:15,653 p=5984 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:07:15,687 p=5984 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:07:18,237 p=5984 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:07:18,245 p=5984 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] *******************************
+2026-04-15 16:07:18,358 p=5984 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:07:19,142 p=5984 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:07:19,152 p=5984 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:07:19,210 p=5984 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:07:19,217 p=5984 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] *******************************
+2026-04-15 16:07:19,269 p=5984 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:07:19,295 p=5984 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:07:19,329 p=5984 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:07:19,720 p=5984 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:07:19,726 p=5984 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] ******************************
+2026-04-15 16:07:19,853 p=5984 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 16:07:19,862 p=5984 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 16:07:19,867 p=5984 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 16:07:19,874 p=5984 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 16:07:20,731 p=5984 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 16:07:20,736 p=5984 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 16:07:20,810 p=5984 u=root n=ansible | ok: [pay-db01] => (item=git)
+2026-04-15 16:07:21,666 p=5984 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 16:07:21,681 p=5984 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 16:07:21,749 p=5984 u=root n=ansible | ok: [pay-db01] => (item=wget)
+2026-04-15 16:07:22,571 p=5984 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 16:07:22,621 p=5984 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 16:07:22,683 p=5984 u=root n=ansible | ok: [pay-db01] => (item=zip)
+2026-04-15 16:07:23,476 p=5984 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 16:07:23,547 p=5984 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 16:07:23,614 p=5984 u=root n=ansible | ok: [pay-db01] => (item=unzip)
+2026-04-15 16:07:23,621 p=5984 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] ******************************
+2026-04-15 16:07:23,682 p=5984 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 16:07:23,685 p=5984 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 16:07:23,686 p=5984 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 16:07:23,686 p=5984 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 16:07:23,727 p=5984 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 16:07:23,742 p=5984 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 16:07:23,754 p=5984 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 16:07:23,762 p=5984 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 16:07:23,767 p=5984 u=root n=ansible | skipping: [pay-db01] => (item=git) 
+2026-04-15 16:07:23,774 p=5984 u=root n=ansible | skipping: [pay-db01] => (item=wget) 
+2026-04-15 16:07:23,778 p=5984 u=root n=ansible | skipping: [pay-db01] => (item=zip) 
+2026-04-15 16:07:23,782 p=5984 u=root n=ansible | skipping: [pay-db01] => (item=unzip) 
+2026-04-15 16:07:26,180 p=5984 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 16:07:28,566 p=5984 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 16:07:30,957 p=5984 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 16:07:33,365 p=5984 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 16:07:33,373 p=5984 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ************************************
+2026-04-15 16:07:33,483 p=5984 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:07:34,441 p=5984 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:07:34,458 p=5984 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:07:34,459 p=5984 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:07:34,466 p=5984 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] **************************
+2026-04-15 16:07:34,519 p=5984 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:07:34,544 p=5984 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:07:34,579 p=5984 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:07:35,066 p=5984 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:07:35,073 p=5984 u=root n=ansible | TASK [pay-api : Install MariaDB] ***********************************************
+2026-04-15 16:07:35,125 p=5984 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:07:35,152 p=5984 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:07:35,160 p=5984 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:07:36,257 p=5984 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:07:36,264 p=5984 u=root n=ansible | TASK [pay-api : Start MariaDB] *************************************************
+2026-04-15 16:07:36,318 p=5984 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:07:36,345 p=5984 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:07:36,355 p=5984 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:07:36,898 p=5984 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:07:36,910 p=5984 u=root n=ansible | PLAY RECAP *********************************************************************
+2026-04-15 16:07:36,910 p=5984 u=root n=ansible | pay-db01                   : ok=7    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2026-04-15 16:07:36,911 p=5984 u=root n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:07:36,911 p=5984 u=root n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:07:36,911 p=5984 u=root n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:26:41,044 p=6361 u=root n=ansible | PLAY [Set up the pay-api environment] *****************************************************
+2026-04-15 16:26:41,057 p=6361 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2026-04-15 16:26:42,536 p=6361 u=root n=ansible | [WARNING]: Platform linux on host pay-web02 is using the discovered Python interpreter at
+/usr/bin/python3.9, but future installation of another Python interpreter could change the
+meaning of that path. See
+https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for
+more information.
+
+2026-04-15 16:26:42,537 p=6361 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:26:42,556 p=6361 u=root n=ansible | [WARNING]: Platform linux on host pay-db01 is using the discovered Python interpreter at
+/usr/bin/python3.9, but future installation of another Python interpreter could change the
+meaning of that path. See
+https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for
+more information.
+
+2026-04-15 16:26:42,557 p=6361 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:26:42,570 p=6361 u=root n=ansible | [WARNING]: Platform linux on host pay-web01 is using the discovered Python interpreter at
+/usr/bin/python3.9, but future installation of another Python interpreter could change the
+meaning of that path. See
+https://docs.ansible.com/ansible/2.10/reference_appendices/interpreter_discovery.html for
+more information.
+
+2026-04-15 16:26:42,570 p=6361 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:26:42,644 p=6361 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:26:42,654 p=6361 u=root n=ansible | TASK [pay-api : Install httpd on CentOS] **************************************************
+2026-04-15 16:26:42,770 p=6361 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:26:42,772 p=6361 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:26:43,752 p=6361 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:26:43,768 p=6361 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:26:43,776 p=6361 u=root n=ansible | TASK [pay-api : Install apache2 on Ubuntu] ************************************************
+2026-04-15 16:26:43,851 p=6361 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:26:43,852 p=6361 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:26:43,884 p=6361 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:26:46,430 p=6361 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:26:46,438 p=6361 u=root n=ansible | TASK [pay-api : Start the web service on CentOS] ******************************************
+2026-04-15 16:26:46,554 p=6361 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:26:46,562 p=6361 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:26:47,325 p=6361 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:26:47,326 p=6361 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:26:47,334 p=6361 u=root n=ansible | TASK [pay-api : Start the web service on Ubuntu] ******************************************
+2026-04-15 16:26:47,384 p=6361 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:26:47,413 p=6361 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:26:47,445 p=6361 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:26:47,842 p=6361 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:26:47,849 p=6361 u=root n=ansible | TASK [pay-api : Install standard tools on CentOS] *****************************************
+2026-04-15 16:26:47,973 p=6361 u=root n=ansible | skipping: [pay-web03] => (item=git) 
+2026-04-15 16:26:47,985 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=git) 
+2026-04-15 16:26:47,993 p=6361 u=root n=ansible | skipping: [pay-web03] => (item=wget) 
+2026-04-15 16:26:47,996 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=wget) 
+2026-04-15 16:26:48,001 p=6361 u=root n=ansible | skipping: [pay-web03] => (item=zip) 
+2026-04-15 16:26:48,009 p=6361 u=root n=ansible | skipping: [pay-web03] => (item=unzip) 
+2026-04-15 16:26:48,013 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=zip) 
+2026-04-15 16:26:48,015 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=unzip) 
+2026-04-15 16:26:48,862 p=6361 u=root n=ansible | ok: [pay-web01] => (item=git)
+2026-04-15 16:26:48,879 p=6361 u=root n=ansible | ok: [pay-web02] => (item=git)
+2026-04-15 16:26:49,791 p=6361 u=root n=ansible | ok: [pay-web02] => (item=wget)
+2026-04-15 16:26:49,796 p=6361 u=root n=ansible | ok: [pay-web01] => (item=wget)
+2026-04-15 16:26:50,707 p=6361 u=root n=ansible | ok: [pay-web02] => (item=zip)
+2026-04-15 16:26:50,736 p=6361 u=root n=ansible | ok: [pay-web01] => (item=zip)
+2026-04-15 16:26:51,621 p=6361 u=root n=ansible | ok: [pay-web02] => (item=unzip)
+2026-04-15 16:26:51,663 p=6361 u=root n=ansible | ok: [pay-web01] => (item=unzip)
+2026-04-15 16:26:51,670 p=6361 u=root n=ansible | TASK [pay-api : Install standard tools on Ubuntu] *****************************************
+2026-04-15 16:26:51,761 p=6361 u=root n=ansible | skipping: [pay-web01] => (item=git) 
+2026-04-15 16:26:51,762 p=6361 u=root n=ansible | skipping: [pay-web01] => (item=wget) 
+2026-04-15 16:26:51,765 p=6361 u=root n=ansible | skipping: [pay-web01] => (item=zip) 
+2026-04-15 16:26:51,766 p=6361 u=root n=ansible | skipping: [pay-web01] => (item=unzip) 
+2026-04-15 16:26:51,768 p=6361 u=root n=ansible | skipping: [pay-web02] => (item=git) 
+2026-04-15 16:26:51,789 p=6361 u=root n=ansible | skipping: [pay-web02] => (item=wget) 
+2026-04-15 16:26:51,797 p=6361 u=root n=ansible | skipping: [pay-web02] => (item=zip) 
+2026-04-15 16:26:51,805 p=6361 u=root n=ansible | skipping: [pay-web02] => (item=unzip) 
+2026-04-15 16:26:51,821 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=git) 
+2026-04-15 16:26:51,830 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=wget) 
+2026-04-15 16:26:51,878 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=zip) 
+2026-04-15 16:26:51,884 p=6361 u=root n=ansible | skipping: [pay-db01] => (item=unzip) 
+2026-04-15 16:26:54,201 p=6361 u=root n=ansible | ok: [pay-web03] => (item=git)
+2026-04-15 16:26:56,608 p=6361 u=root n=ansible | ok: [pay-web03] => (item=wget)
+2026-04-15 16:26:59,026 p=6361 u=root n=ansible | ok: [pay-web03] => (item=zip)
+2026-04-15 16:27:01,446 p=6361 u=root n=ansible | ok: [pay-web03] => (item=unzip)
+2026-04-15 16:27:01,467 p=6361 u=root n=ansible | TASK [pay-api : Deploy custom welcome page] ***********************************************
+2026-04-15 16:27:02,051 p=6361 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:27:02,072 p=6361 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:27:03,250 p=6361 u=root n=ansible | ok: [pay-web02]
+2026-04-15 16:27:03,335 p=6361 u=root n=ansible | ok: [pay-web01]
+2026-04-15 16:27:03,342 p=6361 u=root n=ansible | TASK [pay-api : Deploy custom welcome page on Ubuntu] *************************************
+2026-04-15 16:27:03,395 p=6361 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:27:03,424 p=6361 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:27:03,459 p=6361 u=root n=ansible | skipping: [pay-db01]
+2026-04-15 16:27:03,959 p=6361 u=root n=ansible | ok: [pay-web03]
+2026-04-15 16:27:03,966 p=6361 u=root n=ansible | TASK [pay-api : Install MariaDB] **********************************************************
+2026-04-15 16:27:04,020 p=6361 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:27:04,049 p=6361 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:27:04,059 p=6361 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:27:05,216 p=6361 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:27:05,224 p=6361 u=root n=ansible | TASK [pay-api : Start MariaDB] ************************************************************
+2026-04-15 16:27:05,276 p=6361 u=root n=ansible | skipping: [pay-web01]
+2026-04-15 16:27:05,302 p=6361 u=root n=ansible | skipping: [pay-web02]
+2026-04-15 16:27:05,313 p=6361 u=root n=ansible | skipping: [pay-web03]
+2026-04-15 16:27:05,910 p=6361 u=root n=ansible | ok: [pay-db01]
+2026-04-15 16:27:05,923 p=6361 u=root n=ansible | PLAY RECAP ********************************************************************************
+2026-04-15 16:27:05,923 p=6361 u=root n=ansible | pay-db01                   : ok=3    changed=0    unreachable=0    failed=0    skipped=8    rescued=0    ignored=0   
+2026-04-15 16:27:05,923 p=6361 u=root n=ansible | pay-web01                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:27:05,923 p=6361 u=root n=ansible | pay-web02                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2026-04-15 16:27:05,924 p=6361 u=root n=ansible | pay-web03                  : ok=5    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   

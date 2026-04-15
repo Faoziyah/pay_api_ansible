@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ project_name }} - {{ environment_name }}</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 40px;">
+ 
+    <h1>Welcome to {{ project_name }}</h1>
+ 
+    <p><strong>Environment:</strong> {{ environment_name }}</p>
+    <p><strong>Version:</strong> {{ app_version }}</p>
+    <p><strong>Server:</strong> {{ ansible_hostname }}</p>
+    <p><strong>IP Address:</strong> {{ ansible_default_ipv4.address }}</p>
+    <p><strong>OS:</strong> {{ ansible_distribution }}</p>
+ 
+    <hr>
+    <p style="color: grey;">
+        This server is managed by Ansible. Do not make manual changes.<br>
+        Contact {{ team_email }} for support.
+    </p>
+
+ <h2>Database Information</h2>
+    <p><strong>Database Name:</strong> {{ db_name }}</p>
+    <p><strong>Database Port:</strong> {{ db_port }}</p>
+    <p>Database is hosted on pay-db01</p>
+
+
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+---
+- name: Set up the pay-api environment
+  hosts: all
+  become: yes
+  roles:
+    - pay-api

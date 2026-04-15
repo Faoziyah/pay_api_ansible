@@ -1,0 +1,20 @@
+all:
+  vars:
+    ansible_user: ec2-user
+    ansible_ssh_private_key_file: ./wordpress-key.pem
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  children:
+    webservers:
+      hosts:
+        pay-web01:
+          ansible_host: 172.31.23.229
+        pay-web02:
+          ansible_host: 172.31.30.117
+        pay-web03:
+          ansible_host: 172.31.29.80
+          ansible_user: ubuntu
+    dbservers:
+      hosts:
+        pay-db01:
+          ansible_host: 172.31.23.137
+

@@ -1,0 +1,14 @@
+---
+# handlers file for pay-api
+    - name: Restart web service
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+      when: ansible_os_family == "RedHat"
+
+    - name: Restart web service on Ubuntu
+      ansible.builtin.service:
+        name: apache2
+        state: restarted
+      when: ansible_os_family == "Debian"
+

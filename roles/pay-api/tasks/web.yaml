@@ -1,0 +1,68 @@
+---
+# tasks file for pay-api
+    - name: Install httpd on CentOS
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+      when: ansible_os_family == "RedHat" and 'webservers' in group_names
+
+    - name: Install apache2 on Ubuntu
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian" and 'webservers' in group_names
+
+    - name: Start the web service on CentOS
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes
+      when: ansible_os_family == "RedHat" and 'webservers' in group_names
+
+    - name: Start the web service on Ubuntu
+      ansible.builtin.service:
+        name: apache2
+        state: started
+        enabled: yes
+      when: ansible_os_family == "Debian" and 'webservers' in group_names
+
+    - name: Install standard tools on CentOS
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - git
+        - wget
+        - zip
+        - unzip
+      when: ansible_os_family == "RedHat" and 'webservers' in group_names
+
+    - name: Install standard tools on Ubuntu
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+        - git
+        - wget
+        - zip
+        - unzip
+      when: ansible_os_family == "Debian" and 'webservers' in group_names
+
+    - name: Deploy custom welcome page
+      ansible.builtin.template:
+        src: templates/index.html.j2
+        dest: /var/www/html/index.html
+        backup: yes
+      notify: Restart web service
+      when: ansible_os_family == "RedHat" and 'webservers' in group_names
+
+    - name: Deploy custom welcome page on Ubuntu
+      ansible.builtin.template:
+        src: templates/index.html.j2
+        dest: /var/www/html/index.html
+        backup: yes
+      notify: Restart web service on Ubuntu
+      when: ansible_os_family == "Debian" and 'webservers' in group_names
+

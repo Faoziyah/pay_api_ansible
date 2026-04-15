@@ -1,0 +1,15 @@
+---
+# tasks file for pay-api_db
+
+- name: Install MariaDB
+  dnf:
+    name: mariadb105-server
+    state: present
+  when: "'dbservers' in group_names"
+
+- name: Start MariaDB
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
+  when: "'dbservers' in group_names"

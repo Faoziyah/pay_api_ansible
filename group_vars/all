@@ -1,0 +1,8 @@
+# group_vars/all — variables for every host
+project_name: pay-api
+environment_name: staging
+team_email: devops@payapi.example.com
+app_version: "1.1.0"
+db_name: payapi_staging_db
+db_port: 3306
+
